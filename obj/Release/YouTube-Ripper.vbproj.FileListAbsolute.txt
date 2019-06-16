@@ -1,0 +1,10 @@
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube-Ripper.vbprojResolveAssemblyReference.cache
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube_Ripper.Form1.resources
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube-Ripper.vbproj.GenerateResource.Cache
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\bin\Release\YouTube-Ripper.exe.config
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\bin\Release\YouTube-Ripper.exe
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\bin\Release\YouTube-Ripper.pdb
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\bin\Release\YouTube-Ripper.xml
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube-Ripper.exe
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube-Ripper.xml
+C:\Users\Joyleaf\Documents\workspace\YouTube-Ripper\YouTube-Ripper\obj\Release\YouTube-Ripper.pdb

@@ -1,0 +1,11 @@
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\bin\Debug\YouTube-Ripper.exe.config
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\bin\Debug\YouTube-Ripper.exe
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\bin\Debug\YouTube-Ripper.pdb
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\bin\Debug\YouTube-Ripper.xml
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube_Ripper.Form1.resources
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube_Ripper.Resources.resources
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube-Ripper.vbproj.GenerateResource.Cache
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube-Ripper.exe
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube-Ripper.xml
+c:\users\joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube-Ripper.pdb
+C:\Users\Joyleaf\documents\visual studio 2015\Projects\YouTube-Ripper\YouTube-Ripper\obj\Debug\YouTube-Ripper.vbprojResolveAssemblyReference.cache

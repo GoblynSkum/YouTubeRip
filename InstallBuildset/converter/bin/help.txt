@@ -1,0 +1,17 @@
+YouTube-Ripper
+
+Simple GUI application to download Youtube Videos as H.264 and convert to MP3 if needed.
+Pretty much everything done can be accomplished at the command line - run 1 or 2 times and read log.txt 
+for samples and syntax. 
+
+Most functions should be self evident. 
+
+Requires:
+youtube-dl in bin directory.	 ( https://ytdl-org.github.io/youtube-dl/index.html )
+ffmpeg binaries in subfolder of bin directory. ( https://ffmpeg.org/ )
+id3 tagger in bin folder ( https://blog.forret.com/2007/08/29/id3exe-ideal-tool-for-tagging-and-renaming-mp3-files/ )
+
+Sometimes the ads and updates at youtube mess with the application. 
+Updating youtube-dl generally fixes this reasonably soon as the devs there are pretty awesome.
+
+ 
