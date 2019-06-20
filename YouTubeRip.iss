@@ -2,8 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "YouTube-Ripper"
-#define MyAppVersion "1.2"
-#define MyAppPublisher "Alex"
+#define MyAppVersion "1.3"
+#define MyAppPublisher "GoblynSkum"
 #define MyAppURL "ironforge.org"
 #define MyAppExeName "YouTube-Ripper.exe"
 
@@ -21,11 +21,11 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName=c:\converter
 DisableDirPage=yes
 DisableProgramGroupPage=yes
-LicenseFile=C:\converter\bin\help.txt
+LicenseFile=C:\converter\help.txt
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputBaseFilename=mysetup
-SetupIconFile=C:\converter\bin\YouTubeRip.ico
+OutputBaseFilename=YouTubeRip-Setup
+SetupIconFile=C:\converter\YouTubeRip.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -37,14 +37,14 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\converter\bin\YouTube-Ripper.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\converter\bin\YouTube-Ripper.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\converter\YouTube-Ripper.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\converter\YouTube-Ripper.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\converter\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon; IconFilename: "C:\converter\bin\YouTubeRip.ico"
+Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon; IconFilename: "C:\converter\YouTubeRip.ico"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent

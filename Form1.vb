@@ -8,7 +8,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonMP3_Click(sender As Object, e As EventArgs) Handles ButtonMP3.Click
-        Dim varPrefix As String = "C:\converter\bin\ffmpeg\bin\ffmpeg.exe"
+        Dim varPrefix As String = "C:\converter\ffmpeg\bin\ffmpeg.exe"
         Dim errLines As String = ""
         Dim inputVideo As String = ".\Video\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp4"
         Dim outputAudio As String = ".\Audio\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3"
@@ -36,16 +36,16 @@ Public Class Form1
                 TextBoxMP4.Text = "Bad or invalid Address"
                 logit("Bad URL")
             End If
-			logit(My.Computer.Clock.LocalTime + ": C:\converter\bin\ffmpeg\bin\ffmpeg.exe .\Video\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp4 .\Audio\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3")
+			logit(My.Computer.Clock.LocalTime + ": C:\converter\ffmpeg\bin\ffmpeg.exe .\Video\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp4 .\Audio\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3")
         Catch
             TextBoxMP4.Text = errLines
         Finally
             Try
                 Dim myprocess As New Process
                 Dim outLines As String = ""
-                TextBoxMP3.Text = "C:\converter\bin\id3.exe" & " -t " & ControlChars.Quote & TextBoxName.Text & ControlChars.Quote & " -a " & ControlChars.Quote & TextBoxArtist.Text & ControlChars.Quote & " " & ControlChars.Quote & "C:\Converter\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3" & ControlChars.Quote
+                TextBoxMP3.Text = "C:\converter\id3.exe" & " -t " & ControlChars.Quote & TextBoxName.Text & ControlChars.Quote & " -a " & ControlChars.Quote & TextBoxArtist.Text & ControlChars.Quote & " " & ControlChars.Quote & "C:\Converter\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3" & ControlChars.Quote
                 With myprocess
-                    .StartInfo.FileName = "C:\converter\bin\id3.exe"
+                    .StartInfo.FileName = "C:\converter\id3.exe"
                     .StartInfo.Arguments = " -t " & ControlChars.Quote & TextBoxName.Text & ControlChars.Quote & " -a " & ControlChars.Quote & TextBoxArtist.Text & ControlChars.Quote & " " & ControlChars.Quote & "C:\Converter\Audio\" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp3" & ControlChars.Quote
                     .StartInfo.WindowStyle = ProcessWindowStyle.Hidden
                     .StartInfo.RedirectStandardOutput = True
@@ -71,7 +71,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonH264_Click(sender As Object, e As EventArgs) Handles ButtonH264.Click
-        Dim varPrefix As String = "c:\converter\bin\YouTube-Dl.exe"
+        Dim varPrefix As String = "c:\converter\YouTube-Dl.exe"
         Dim errLines As String = ""
         Dim outputVideo = "" & TextBoxArtist.Text & " - " & TextBoxName.Text & ".mp4"
         Dim errDetect As Boolean = False
@@ -81,7 +81,7 @@ Public Class Form1
             Dim myprocess As New Process
             Dim outLines As String = ""
             With myprocess
-                .StartInfo.FileName = "c:\converter\bin\youtube-dl.exe"
+                .StartInfo.FileName = "c:\converter\youtube-dl.exe"
                 .StartInfo.Arguments = " --no-call-home " & TextBoxURL.Text & " -f mp4 --audio-format aac -o " & ControlChars.Quote & outputVideo & ControlChars.Quote
                 .StartInfo.WindowStyle = ProcessWindowStyle.Hidden
                 .StartInfo.RedirectStandardOutput = True
@@ -97,7 +97,7 @@ Public Class Form1
                 errDetect = True
                 TextBoxMP4.Text = "Bad or invalid Address"
             End If
-			logit(My.Computer.Clock.LocalTime + ": c:\converter\bin\youtube-dl.exe  --no-call-home " & TextBoxURL.Text & " -f mp4 --audio-format aac -o " & ControlChars.Quote & outputVideo & ControlChars.Quote )
+			logit(My.Computer.Clock.LocalTime + ": c:\converter\youtube-dl.exe  --no-call-home " & TextBoxURL.Text & " -f mp4 --audio-format aac -o " & ControlChars.Quote & outputVideo & ControlChars.Quote )
         Catch
             TextBoxMP4.Text = errLines
         End Try
@@ -111,7 +111,6 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     	Dim outputVideo As String = ""
 		logit(My.Computer.Clock.LocalTime + ": Startup")
-		updateYoutubeDL()
     End Sub
     
     Sub BtnUpdateClick(sender As Object, e As EventArgs)
@@ -119,18 +118,18 @@ Public Class Form1
     End Sub
     
     Sub logit (ByVal sArg As String)
-    		txtStatus.AppendText(vbCrLf + sArg)
+    		txtStatus.AppendText(sArg + vbCrLf)
     		IO.File.AppendAllText("Log.txt", String.Format("{0}{1}", Environment.NewLine, sArg ))
     End Sub
     	
 	Sub updateYoutubeDL()
-    	logit(My.Computer.Clock.LocalTime + ": Updating youtube-dl from https://yt-dl.org/downloads/latest/youtube-dl.exe" )
+    	logit(My.Computer.Clock.LocalTime + ": If update fails replace c:\converter\youtube-dl.exe with latest from" + vbCrLf + "https://ytdl-org.github.io/youtube-dl/download.html" )
     	Try
     		My.Computer.FileSystem.DeleteFile("youtube-dl.exe")
     	Catch ex As Exception
     	End Try
     	Try	
-    		My.Computer.Network.DownloadFile("https://yt-dl.org/downloads/latest/youtube-dl.exe", "youtube-dl.exe", "anonymous", "")
+    		My.Computer.Network.DownloadFile("https://yt-dl.org/downloads/2019.06.08/youtube-dl.exe", "youtube-dl.exe", "anonymous", "")
     	Catch ex As Exception
     	End Try		
     End Sub
